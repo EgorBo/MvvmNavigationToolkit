@@ -4,27 +4,28 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0486D843-FCD0-423C-BAEB-B64117A70389}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{AE5A1427-B427-48B9-91B3-7A095616F82A}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MvvmNavigationToolkit</RootNamespace>
-    <AssemblyName>MvvmNavigationToolkit.WindowsStore</AssemblyName>
+    <RootNamespace>MvvmNavigationToolkit.WindowsStore.Sample</RootNamespace>
+    <AssemblyName>MvvmNavigationToolkit.WindowsStore.Sample</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>MvvmNavigationToolkit.WindowsStore.Sample_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NETFX_CORE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -100,21 +101,56 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReflectionExtensions.cs" />
-    <Compile Include="Contracts\IIoCContainerBuilder.cs" />
-    <Compile Include="DockType.cs" />
-    <Compile Include="Contracts\ICloseable.cs" />
-    <Compile Include="ModalPopup.cs" />
-    <Compile Include="NavigationManagerBase.cs" />
-    <Compile Include="NavigationMapper.cs" />
-    <Compile Include="NavigationRegisteredViewModel.cs" />
-    <Compile Include="PopupsController.cs" />
-    <Compile Include="PreferredLocationAttribute.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ContainerBuilderAdapter.cs" />
+    <Compile Include="Infrastructure\LayerModule.cs" />
+    <Compile Include="Infrastructure\ServiceLocator.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModelsRegistry.cs" />
-    <Compile Include="ViewPreferredLocationType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="MvvmNavigationToolkit.WindowsStore.Sample_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvvmNavigationToolkit.WindowsStore\MvvmNavigationToolkit.WindowsStore.csproj">
+      <Project>{0486d843-fcd0-423c-baeb-b64117a70389}</Project>
+      <Name>MvvmNavigationToolkit.WindowsStore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\libs\Autofac\Autofac.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

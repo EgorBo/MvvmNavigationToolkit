@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
-using MvvmNavigationToolkit.WindowsStore;
 
 namespace MvvmNavigationToolkit
 {

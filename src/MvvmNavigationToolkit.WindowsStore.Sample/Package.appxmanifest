@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+
+  <Identity Name="431e63e3-0ca0-4f08-897d-66c06bb2c65c"
+            Publisher="CN=Egor"
+            Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>MvvmNavigationToolkit.WindowsStore.Sample</DisplayName>
+    <PublisherDisplayName>Egor</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="MvvmNavigationToolkit.WindowsStore.Sample.App">
+        <VisualElements
+            DisplayName="MvvmNavigationToolkit.WindowsStore.Sample"
+            Logo="Assets\Logo.png"
+            SmallLogo="Assets\SmallLogo.png"
+            Description="MvvmNavigationToolkit.WindowsStore.Sample"
+            ForegroundText="light"
+            BackgroundColor="#464646">
+            <DefaultTile ShowName="allLogos" />
+            <SplashScreen Image="Assets\SplashScreen.png" />
+        </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

@@ -1,8 +1,9 @@
 ﻿using System.Windows;
+using GalaSoft.MvvmLight;
 
 namespace MvvmNavigationToolkit.WindowsPhone.Sample.ViewModels
 {
-    public class FrameViewModel : BaseViewModel
+    public class FrameViewModel : ViewModelBase
     {
         private bool _isBusy;
         

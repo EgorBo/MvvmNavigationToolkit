@@ -6,7 +6,6 @@ using System.Windows;
 using Windows.UI.Xaml;
 #endif
 using MvvmNavigationToolkit.Contracts;
-using MvvmNavigationToolkit.WindowsStore;
 
 namespace MvvmNavigationToolkit
 {

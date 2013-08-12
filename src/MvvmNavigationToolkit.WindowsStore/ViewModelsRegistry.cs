@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MvvmNavigationToolkit.WindowsStore
+namespace MvvmNavigationToolkit
 {
     public static class ViewModelsRegistry
     {

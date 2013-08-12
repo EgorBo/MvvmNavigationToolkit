@@ -5,11 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmNavigationToolkit.Windo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmNavigationToolkit.WindowsPhone", "MvvmNavigationToolkit.WindowsPhone\MvvmNavigationToolkit.WindowsPhone.csproj", "{437CC61F-1267-4BC5-953C-944FE8898AFD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsStore(TODO)", "WindowsStore(TODO)", "{B964E5AB-9E6B-4BD3-8D5A-68E292E7E597}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsStore (TODO)", "WindowsStore (TODO)", "{B964E5AB-9E6B-4BD3-8D5A-68E292E7E597}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsPhone", "WindowsPhone", "{258B54AA-69F6-4BC8-BE38-2BA0C827C126}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmNavigationToolkit.WindowsPhone.Sample", "MvvmNavigationToolkit.WindowsPhone.Sample\MvvmNavigationToolkit.WindowsPhone.Sample.csproj", "{119A78BD-1A8F-4EEA-8E10-D00842210445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmNavigationToolkit.WindowsStore.Sample", "MvvmNavigationToolkit.WindowsStore.Sample\MvvmNavigationToolkit.WindowsStore.Sample.csproj", "{AE5A1427-B427-48B9-91B3-7A095616F82A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,12 +75,37 @@ Global
 		{119A78BD-1A8F-4EEA-8E10-D00842210445}.Release|x86.ActiveCfg = Release|x86
 		{119A78BD-1A8F-4EEA-8E10-D00842210445}.Release|x86.Build.0 = Release|x86
 		{119A78BD-1A8F-4EEA-8E10-D00842210445}.Release|x86.Deploy.0 = Release|x86
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|ARM.Build.0 = Debug|ARM
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|ARM.Deploy.0 = Debug|ARM
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|x64.ActiveCfg = Debug|x64
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|x64.Build.0 = Debug|x64
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|x64.Deploy.0 = Debug|x64
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|x86.ActiveCfg = Debug|x86
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|x86.Build.0 = Debug|x86
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Debug|x86.Deploy.0 = Debug|x86
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|ARM.ActiveCfg = Release|ARM
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|ARM.Build.0 = Release|ARM
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|ARM.Deploy.0 = Release|ARM
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|x64.ActiveCfg = Release|x64
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|x64.Build.0 = Release|x64
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|x64.Deploy.0 = Release|x64
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|x86.ActiveCfg = Release|x86
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|x86.Build.0 = Release|x86
+		{AE5A1427-B427-48B9-91B3-7A095616F82A}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0486D843-FCD0-423C-BAEB-B64117A70389} = {B964E5AB-9E6B-4BD3-8D5A-68E292E7E597}
+		{AE5A1427-B427-48B9-91B3-7A095616F82A} = {B964E5AB-9E6B-4BD3-8D5A-68E292E7E597}
 		{437CC61F-1267-4BC5-953C-944FE8898AFD} = {258B54AA-69F6-4BC8-BE38-2BA0C827C126}
 		{119A78BD-1A8F-4EEA-8E10-D00842210445} = {258B54AA-69F6-4BC8-BE38-2BA0C827C126}
 	EndGlobalSection
