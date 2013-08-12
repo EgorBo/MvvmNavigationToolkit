@@ -184,13 +184,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\..\..\libs\Autofac\Autofac.dll</HintPath>
+      <HintPath>..\..\libs\Autofac\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras.WP8">
-      <HintPath>..\..\..\libs\MvvmLight\GalaSoft.MvvmLight.Extras.WP8.dll</HintPath>
+      <HintPath>..\..\libs\MvvmLight\GalaSoft.MvvmLight.Extras.WP8.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.WP8">
-      <HintPath>..\..\..\libs\MvvmLight\GalaSoft.MvvmLight.WP8.dll</HintPath>
+      <HintPath>..\..\libs\MvvmLight\GalaSoft.MvvmLight.WP8.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Interactions" />
     <Reference Include="System.Windows.Interactivity" />
