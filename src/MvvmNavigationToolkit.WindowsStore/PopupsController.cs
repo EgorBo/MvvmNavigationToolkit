@@ -69,7 +69,7 @@ namespace MvvmNavigationToolkit
             }
             else
             {
-                throw new NotImplementedException("Implement it yourself!");
+                throw new NotImplementedException();
             }
 
             element.Width = popup.Width;

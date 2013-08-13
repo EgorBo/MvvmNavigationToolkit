@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmNavigationToolkit.Windo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmNavigationToolkit.WindowsPhone", "MvvmNavigationToolkit.WindowsPhone\MvvmNavigationToolkit.WindowsPhone.csproj", "{437CC61F-1267-4BC5-953C-944FE8898AFD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsStore (TODO)", "WindowsStore (TODO)", "{B964E5AB-9E6B-4BD3-8D5A-68E292E7E597}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsStore", "WindowsStore", "{B964E5AB-9E6B-4BD3-8D5A-68E292E7E597}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsPhone", "WindowsPhone", "{258B54AA-69F6-4BC8-BE38-2BA0C827C126}"
 EndProject
