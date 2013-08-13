@@ -3,8 +3,9 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
+using MvvmNavigationToolkit.WindowsStore.Sample.Infrastructure;
+using MvvmNavigationToolkit.WindowsStore.Sample.Views;
 
 namespace MvvmNavigationToolkit.WindowsStore.Sample
 {
@@ -39,6 +40,7 @@ namespace MvvmNavigationToolkit.WindowsStore.Sample
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
+                rootFrame.Style = Resources["RootFrameStyle"] as Style;
 
                 if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
@@ -48,19 +50,27 @@ namespace MvvmNavigationToolkit.WindowsStore.Sample
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
+            else
+            {
+                rootFrame.Style = Resources["RootFrameStyle"] as Style;
+            }
 
+            Bootstrapper.Run();
             if (rootFrame.Content == null)
             {
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                if (!rootFrame.Navigate(typeof(MainPage), args.Arguments))
-                {
-                    throw new Exception("Failed to create initial page");
-                }
+                ServiceLocator.Resolve<NavigationManagerBase>().StartupNavigation(rootFrame, args.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
+        }
+
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            Bootstrapper.Run();
+            base.OnActivated(args);
         }
 
         /// <summary>

@@ -107,13 +107,36 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationModule.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Converters\BooleanToValueConverter.cs" />
+    <Compile Include="DesignTimeViewModels\DesignTimeNotesViewModel.cs" />
+    <Compile Include="Extensions\CommonExtensions.cs" />
     <Compile Include="Infrastructure\ContainerBuilderAdapter.cs" />
     <Compile Include="Infrastructure\LayerModule.cs" />
     <Compile Include="Infrastructure\ServiceLocator.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Navigation\AppNavigationManager.cs" />
+    <Compile Include="ViewModels\Settings\AppSettingsViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsController.cs" />
+    <Compile Include="Views\AppSettingsView.xaml.cs">
+      <DependentUpon>AppSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BasePage.cs" />
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\FrameViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\NotesViewModel.cs" />
+    <Compile Include="ViewModels\NoteViewModel.cs" />
+    <Compile Include="Views\NotesView.xaml.cs">
+      <DependentUpon>NotesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoteView.xaml.cs">
+      <DependentUpon>NoteView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -136,9 +159,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\AppSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NotesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NoteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -151,7 +186,14 @@
     <Reference Include="Autofac">
       <HintPath>..\..\libs\Autofac\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.Win8">
+      <HintPath>..\..\libs\MvvmLight\GalaSoft.MvvmLight.Extras.Win8.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Win8">
+      <HintPath>..\..\libs\MvvmLight\GalaSoft.MvvmLight.Win8.dll</HintPath>
+    </Reference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>

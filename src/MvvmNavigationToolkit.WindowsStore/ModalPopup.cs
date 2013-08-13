@@ -1,6 +1,4 @@
-using MvvmNavigationToolkit;
-
-namespace Viber.Metro.Toolkit.Navigation
+namespace MvvmNavigationToolkit
 {
     public class ModalPopupAttribute : PreferredLocationAttribute
     {

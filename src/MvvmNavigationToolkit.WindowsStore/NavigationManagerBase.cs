@@ -19,7 +19,7 @@ namespace MvvmNavigationToolkit
 
         public Dictionary<Type, Type> ViewsMap { get { return _navigationBuilder.ViewsMap; } }
 
-        public abstract Type[] RootView { get; }
+        public abstract Type[] RootViews { get; }
 
         public abstract void StartupNavigation(Frame rootFrame, string arguments);
 
@@ -31,7 +31,6 @@ namespace MvvmNavigationToolkit
             if (frame == null)
             {
                 frame = new Frame();
-                frame.Style = Application.Current.Resources["RootFrameStyle"] as Style;
                 Window.Current.Content = frame;   
             }
 
@@ -42,7 +41,7 @@ namespace MvvmNavigationToolkit
                     return;
             }
 
-            bool isRootPage = RootView.Contains(viewModel.GetType());
+            bool isRootPage = RootViews.Contains(page.GetType());
             if (isRootPage)
             {
                 //quick way to clear the navigation history

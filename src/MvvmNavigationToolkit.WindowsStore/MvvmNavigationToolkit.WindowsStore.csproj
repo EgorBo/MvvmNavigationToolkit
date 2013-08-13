@@ -102,6 +102,8 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="INavigatableViewModel.cs" />
+    <Compile Include="NavigatablePage.cs" />
     <Compile Include="ReflectionExtensions.cs" />
     <Compile Include="Contracts\IIoCContainerBuilder.cs" />
     <Compile Include="DockType.cs" />

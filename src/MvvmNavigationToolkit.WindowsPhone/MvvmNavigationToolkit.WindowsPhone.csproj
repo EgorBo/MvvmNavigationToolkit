@@ -86,6 +86,9 @@
     <Compile Include="..\MvvmNavigationToolkit.WindowsStore\Contracts\IIoCContainerBuilder.cs">
       <Link>Contracts\IIoCContainerBuilder.cs</Link>
     </Compile>
+    <Compile Include="..\MvvmNavigationToolkit.WindowsStore\INavigatableViewModel.cs">
+      <Link>INavigatableViewModel.cs</Link>
+    </Compile>
     <Compile Include="..\MvvmNavigationToolkit.WindowsStore\NavigationMapper.cs">
       <Link>NavigationMapper.cs</Link>
     </Compile>
@@ -95,7 +98,6 @@
     <Compile Include="..\MvvmNavigationToolkit.WindowsStore\ViewModelsRegistry.cs">
       <Link>ViewModelsRegistry.cs</Link>
     </Compile>
-    <Compile Include="IViewModel.cs" />
     <Compile Include="NavigatablePage.cs" />
     <Compile Include="NavigationManagerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
